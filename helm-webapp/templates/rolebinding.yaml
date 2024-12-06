@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: nginx-rolebinding
+  namespace: vabvl9-helmapp  # Change to the appropriate namespace
+subjects:
+  - kind: ServiceAccount
+    name: nginx-sa  # The service account being granted access
+    namespace: default  # Ensure this matches the namespace of the Service Account
+roleRef:
+  kind: Role
+  name: nginx-role  # The name of the Role being referenced
+  apiGroup: rbac.authorization.k8s.io
