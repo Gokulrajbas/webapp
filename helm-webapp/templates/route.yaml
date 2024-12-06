@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: nginx-route
-  namespace: your-namespace
+  namespace: nginx-route-vabvl9
 spec:
   to:
     kind: Service
